@@ -5,6 +5,10 @@ const Lounge = () => {
     return (
         <section>
             <div>Lounge Page</div>
+            <br />
+            <br />
+            <br />
+            <br />
             <Link to='/'>Home</Link>
         </section>
     )
