@@ -1,11 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './LinkPage.css';
 
 const LinkPage = () => {
     return (
         <section>
-            <h1>Links</h1>
+            <h1 className='heading-1'>Links</h1>
             <h2>Public</h2>
             <Link to='/login'>Login</Link>
             <Link to='/register'>Register</Link><br />
