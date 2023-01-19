@@ -1,15 +1,13 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Users from './Users';
 
 const Admin = () => {
     return (
         <section>
             <div>Admins Page</div>
             <br />
-            <p>You must have been assigned an Admin role.</p>
-            <br />
-            <br />
-            <br />
+            <Users />
             <br />
             <div className="flexGrow">
                 <Link to="/">Home</Link>
