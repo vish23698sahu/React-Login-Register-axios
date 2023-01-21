@@ -1,4 +1,3 @@
-import jwt from 'jwt-decode';
 import { useEffect, useRef, useState } from 'react';
 import useAuth from '../hooks/useAuth';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
@@ -9,7 +8,7 @@ import axios from '../api/axios';
 const LOGIN_URL = '/auth';
 
 const Login = () => {
-    const { setAuth, persist, setPersist } = useAuth();
+    const { setAuth } = useAuth();
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -43,13 +42,7 @@ const Login = () => {
                 }
             )
             const accessToken = response?.data?.accessToken;
-
-            const userData = jwt(accessToken);
-            // console.log('User data : ', userData);
-
-            const roles = userData.UserInfo.roles;
-            setAuth({ user, pwd, roles, accessToken });
-            // setUser('');
+            setAuth({ user, accessToken });
             resetUser();
             setPwd('');
             navigate(from, { replace: true });
@@ -120,4 +113,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Login;
